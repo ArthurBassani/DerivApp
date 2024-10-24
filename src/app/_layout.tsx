@@ -3,7 +3,7 @@ import { colors } from "../styles/colors";
 import React from "react";
 
 export default function RootLayout() {
-  const backgroundColor = colors.color4;
+  const backgroundColor = "#ffffff";
   return (
     <Stack
       screenOptions={{
