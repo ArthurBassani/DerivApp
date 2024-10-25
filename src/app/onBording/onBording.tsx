@@ -1,8 +1,11 @@
 import { View, Text, FlatList, StyleSheet, Animated } from "react-native";
-import { OnBordingItem } from "./onBordingItem";
 import React, { useState, useRef } from "react";
-import slides from "@/slides";
+import { OnBordingItem } from "./onBordingItem";
+import { NextButton } from "./nextButton";
 import { Paginator } from "./paginator";
+import slides from "@/slides";
+import { CurrentRenderContext } from "@react-navigation/native";
+
 export function OnBording() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -11,8 +14,16 @@ export function OnBording() {
     setCurrentIndex(viewableItems[0].index);
   }).current;
 
-  const slidesRef = useRef(null);
+  const slidesRef = useRef<FlatList>(null);
   const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
+  const scrollTo = () => {
+    if (currentIndex < slides.length - 1) {
+      slidesRef.current?.scrollToIndex({ index: currentIndex + 1 });
+    } else {
+      console.log("Ultimo item");
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={{ flex: 3 }}>
@@ -34,6 +45,7 @@ export function OnBording() {
           ref={slidesRef}
         ></FlatList>
         <Paginator data={slides} scrollX={scrollX}></Paginator>
+        <NextButton scrollTo={scrollTo}></NextButton>
       </View>
     </View>
   );

@@ -11,13 +11,26 @@ export default [
     title: "Crie sua conta para \n começar a praticar",
     description:
       "Tendo uma conta, poderá ver suas conquistas, além de seus melhores tempos e questões resolvidas",
-    image: require("@/assets/images/onBording/undraw_Welcoming.png"),
+    image: require("@/assets/images/onBording/undraw_Sign_in.png"),
   },
   {
     id: "2",
-    title: "Crie sua conta para \n começar a praticar",
+    title: "Aprenda jogando e se divertindo",
     description:
-      "Tendo uma conta, poderá ver suas conquistas, além de seus melhores tempos e questões resolvidas",
-    image: require("@/assets/images/onBording/undraw_Welcoming.png"),
+      "Possuimos os mais diversos tipos de exercicios para todos os níveis",
+    image: require("@/assets/images/onBording/undraw_video_games.png"),
+  },
+  {
+    id: "3",
+    title: "Complete seus objetivos e atinja suas metas",
+    description:
+      "Possuimos os mais diversos tipos de exercicios para todos os níveis",
+    image: require("@/assets/images/onBording/undraw_Choose.png"),
+  },
+  {
+    id: "4",
+    title: "Vamos começar",
+    description: "",
+    image: require("@/assets/images/onBording/undraw_mathematics.png"),
   },
 ];

@@ -6,6 +6,7 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
+import { colors } from "@/src/styles/colors";
 
 export function OnBordingItem({ item }: any) {
   const { width } = useWindowDimensions();
@@ -34,12 +35,12 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     fontSize: 28,
     marginBottom: 10,
-    color: "#493d8a",
+    color: colors.primaryBlue,
     textAlign: "center",
   },
   description: {
     fontWeight: "300",
-    color: "#62656b",
+    color: "black",
     textAlign: "center",
     paddingHorizontal: 64,
   },
