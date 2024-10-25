@@ -1,4 +1,11 @@
-export default [
+type SlideItens = {
+  id: string;
+  title: string;
+  description: string;
+  image: any;
+};
+
+export const slides: SlideItens[] = [
   {
     id: "0",
     title: "Bem-vindo ao DerivApp",
