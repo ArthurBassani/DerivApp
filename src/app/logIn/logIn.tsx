@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
+//Arthur
 export default function LogIn() {
   return (
     <View style={styles.container}>

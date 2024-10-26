@@ -7,6 +7,7 @@ import { OnBordingItem } from "./onBordingItem";
 import { NextButton } from "./nextButton";
 import { Paginator } from "./paginator";
 
+//Arthur
 export function OnBording() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -23,7 +24,7 @@ export function OnBording() {
     if (currentIndex < slides.length - 1) {
       slidesRef.current?.scrollToIndex({ index: currentIndex + 1 });
     } else {
-      router.navigate("/logIn/logIn");
+      router.navigate("/signIn/signIn");
     }
   };
 

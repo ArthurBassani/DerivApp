@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { colors } from "@/src/styles/colors";
 
+//Arthur
 export function OnBordingItem({ item }: any) {
   const { width } = useWindowDimensions();
   return (

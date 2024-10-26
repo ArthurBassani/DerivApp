@@ -1,10 +1,11 @@
+//Arthur
 type SlideItens = {
   id: string;
   title: string;
   description: string;
   image: any;
 };
-
+//Arthur
 export const slides: SlideItens[] = [
   {
     id: "0",
