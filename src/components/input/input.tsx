@@ -17,7 +17,7 @@ export function Input({ ...rest }: TextInputProps) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    backgroundColor: colors.grayBg,
+    backgroundColor: colors.purpleBg,
     height: 52,
     padding: 10,
     borderRadius: 8,
