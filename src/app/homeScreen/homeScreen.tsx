@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   card: { 
     width: '45%', 
     margin: 5, 
-    backgroundColor: '#0050B5', 
+    backgroundColor: '#114EA8', 
   },
   text: { 
     color: 'white', 
