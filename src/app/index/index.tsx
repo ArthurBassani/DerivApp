@@ -1,4 +1,4 @@
-import { HomeScreen } from "../homeScreen/homeScreen";
+import  homeScreen  from "../homeScreen/homeScreen";
 import { OnBording } from "../onBording/onBording";
 import { FontAwesome } from "@expo/vector-icons";
 import { useFonts } from "expo-font";

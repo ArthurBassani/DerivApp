@@ -9,6 +9,7 @@ import React, { useRef, useEffect } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { colors } from "@/src/styles/colors";
 
+//Arthur
 export function NextButton({ scrollTo }: any) {
   return (
     <View style={styles.container}>
