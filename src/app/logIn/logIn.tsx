@@ -1,4 +1,4 @@
-import { Button } from "@/src/components/button/button";
+import { Button}  from "@/src/components/Button/Button";
 import { View, Text, StyleSheet } from "react-native";
 import { Input } from "@/src/components/input/input";
 import { colors } from "@/src/styles/colors";
