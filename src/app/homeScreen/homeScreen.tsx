@@ -14,7 +14,7 @@ const data = [
 
 export default function HomeScreen() {
   return (
-    <>
+    <View style={styles.container}>
       <Header />
       <FlatList
         data={data}
@@ -25,21 +25,24 @@ export default function HomeScreen() {
             <Text style={styles.text}>{item.title}</Text>
           </TouchableOpacity>
         )}
-        contentContainerStyle={styles.container}
+        contentContainerStyle={styles.listContainer}
       />
       <Footer />
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap', 
-    justifyContent: 'center', 
+    backgroundColor: '#E7DDED',
+  },
+  listContainer: {
+    flexGrow: 1,
+    justifyContent: "flex-start",
     alignItems: 'center',
-    padding: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   card: { 
     width: '45%',
@@ -49,6 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 8, 
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 10,
   },
   text: { 
     color: 'white', 

@@ -15,12 +15,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     paddingHorizontal: 20,
   },
   icon: {
     width: 40,
     height: 40,
+    alignItems: 'center',
   },
 });
 
