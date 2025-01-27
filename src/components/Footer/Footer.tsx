@@ -3,8 +3,8 @@ import { View, StyleSheet, Image } from 'react-native';
 const Footer: React.FC = () => {
   return (
     <View style={styles.footer}>
-      <Image source={{ }} style={styles.icon} /> //Onde eu pego os icones???
-      <Image source={{ }} style={styles.icon} />
+      <Image source={require('@/assets/images/icons/book.png')} style={styles.icon} /> 
+      <Image source={require('@/assets/images/icons/flag.png')} style={styles.icon} />
     </View>
   );
 }

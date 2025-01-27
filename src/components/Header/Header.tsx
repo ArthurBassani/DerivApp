@@ -21,7 +21,9 @@ const Header: React.FC = () => {
             visible={menuVisible}
             onDismiss={closeMenu}
             anchor={
-                <TouchableOpacity onPress={openMenu} style={styles.userIcon} />
+              <TouchableOpacity onPress={openMenu} style={styles.userIcon}>
+                     <Text style={{ display: 'none' }}>Menu</Text>
+              </TouchableOpacity>
             }
             >
                 <Menu.Item onPress={() => alert('Dados')} title="Dados" />
