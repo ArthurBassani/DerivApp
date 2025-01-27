@@ -1,10 +1,22 @@
 import { View, StyleSheet, Image } from 'react-native';
+import { Link } from "expo-router";
 
 const Footer: React.FC = () => {
   return (
     <View style={styles.footer}>
-      <Image source={require('@/assets/images/icons/book.png')} style={styles.icon} /> 
-      <Image source={require('@/assets/images/icons/flag.png')} style={styles.icon} />
+      <Link href="/homeScreen/homeScreen" style={styles.link}>
+         <Image 
+            source={require('@/assets/images/icons/book.png')} 
+            style={styles.icon} 
+            />
+      </Link>
+       
+      <Link href="/ranking/ranking" style={styles.link}>
+          <Image 
+             source={require('@/assets/images/icons/flag.png')} 
+             style={styles.icon} 
+          />
+      </Link>
     </View>
   );
 }
@@ -22,6 +34,10 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     alignItems: 'center',
+  },
+  link: {
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
