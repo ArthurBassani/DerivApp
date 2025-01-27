@@ -34,16 +34,21 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    flexDirection: 'row', 
+    flex: 1,
+    flexDirection: 'row',
     flexWrap: 'wrap', 
-    justifyContent: 'space-around', 
-    padding: 10,
+    justifyContent: 'center', 
+    alignItems: 'center',
+    padding: 20,
   },
   card: { 
-    width: '45%', 
+    width: '45%',
+    height: 150, 
     margin: 5, 
-    backgroundColor: '#114EA8', 
+    backgroundColor: '#114EA8',
+    borderRadius: 8, 
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: { 
     color: 'white', 
