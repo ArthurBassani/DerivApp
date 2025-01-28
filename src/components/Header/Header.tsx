@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     <PaperProvider>
         <View style={styles.header}>
             <Image 
-            source={require('@/assets/images/serelepe/serelepe_principal.png')} 
+            source={require('@/assets/images/serelepe_principal.png')} 
             style={styles.icon}
             />
             <Text style={styles.score}>0</Text>
@@ -21,7 +21,11 @@ const Header: React.FC = () => {
             visible={menuVisible}
             onDismiss={closeMenu}
             anchor={
-              <TouchableOpacity onPress={openMenu} style={styles.userIcon}>
+              <TouchableOpacity onPress={openMenu}>
+                <Image 
+                source={require('@/assets/images/icons/user.png')}
+                style={styles.icon} 
+          />
                      <Text style={{ display: 'none' }}>Menu</Text>
               </TouchableOpacity>
             }
@@ -55,12 +59,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
   },
-  userIcon: {
-    width: 40,
-    height: 40,
-    backgroundColor: '#FFD700',
-    borderRadius: 20,
-  },
+
 });
 
 export default Header;
