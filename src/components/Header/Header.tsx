@@ -31,9 +31,6 @@ const Header: React.FC = () => {
             }
             >
                 <Menu.Item onPress={() => alert('Dados')} title="Dados" />
-                <Menu.Item onPress={() => alert('Ver Conquistas')} title="Ver Conquistas" />
-                <Menu.Item onPress={() => alert('Ver Estatísticas')} title="Ver Estatísticas" />
-                <Menu.Item onPress={() => alert('Configurações')} title="Configurações" />
                 <Menu.Item onPress={() => alert('Ajuda')} title="Ajuda" />
             </Menu>
         </View>
