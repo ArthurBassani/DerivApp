@@ -59,12 +59,12 @@ export default function SignIn() {
         <Input placeholder="Senha"></Input>
         <View style={styles.buttons}>
           <Button
-            title="Criar Conta"
+            title="Criar conta"
             color={colors.white}
             onPress={() => router.navigate("/homeScreen/homeScreen")}
           />
           <Button
-            title="Já Tenho Uma Conta"
+            title="Já tenho uma conta"
             color={colors.white}
             onPress={() => router.navigate("/logIn/logIn")}
           />
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     backgroundColor: "#fff",
     justifyContent: "center",
+    borderRadius: 8,
   },
   pageTitleContainer: {},
   pageTitle: {
