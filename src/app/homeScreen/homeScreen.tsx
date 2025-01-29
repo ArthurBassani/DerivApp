@@ -1,25 +1,51 @@
 import { FlatList, Text, TouchableOpacity, View, StyleSheet } from "react-native";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "@/src/components/Header/Header";
 import Footer from "@/src/components/Footer/Footer";
-
-const data = [
-  { id: '1', title: 'DERIVADAS PRIMITIVAS' },
-  { id: '2', title: 'DERIVADA DA SOMA' },
-  { id: '3', title: 'DERIVADA DO PRODUTO' },
-  { id: '4', title: 'DERIVADA DA DIVISÃO' },
-  { id: '5', title: 'DERIVADA DA COMPOSIÇÃO' },
-  { id: '6', title: 'DERIVADA' },
-];
+import supabase from "@/src/services/supabase";
 
 export default function HomeScreen() {
+  const [Derivada, setDerivada] = useState<{ id: number; tipo: number; title?: string }[]>([]);
+
+  const mapearTitulo = (tipo: number) => {
+    const titulos: Record<number, string> = {
+      1: "DERIVADAS PRIMITIVAS",
+      2: "DERIVADAS DA SOMA",
+      3: "DERIVADAS DO PRODUTO",
+      4: "DERIVADAS DA DIVISÃO",
+      5: "DERIVADAS DA COMPOSIÇÃO",
+      6: "DERIVADAS SURPRESA",
+    };
+    return titulos[tipo] || "DERIVADAS SEM CLASSIFICAÇÃO";
+  };
+
+  useEffect(() => {
+    const fetchDerivada = async () => {
+      const { data, error } = await supabase.from("Derivada").select("id, tipo");
+
+      if (error) {
+        console.log("Erro ao buscar derivada", error.message);
+      } else {
+        const derivadasFormatadas = data.map((item: { id: number; tipo: number }) => ({
+          ...item,
+          title: mapearTitulo(item.tipo),
+        }));
+
+        console.log("Derivadas carregadas:", derivadasFormatadas);
+        setDerivada(derivadasFormatadas);
+      }
+    };
+
+    fetchDerivada();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Header />
       <FlatList
-        data={data}
+        data={Derivada} //era data antes
         numColumns={2}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.card}>
             <Text style={styles.text}>{item.title}</Text>
