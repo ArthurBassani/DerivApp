@@ -1,14 +1,14 @@
 type derivativesItems = {
     id: string;
     name: string;
+    link: string;
 };
 
 export const derivatives: derivativesItems[] = [
-    { id: "1", name: "Derivadas da Soma" },
-    { id: "2", name: "Derivadas da Composição" },
-    { id: "3", name: "Derivadas da Divisão" },
-    { id: "4", name: "Derivadas Surpresa" },
-    { id: "5", name: "Derivadas Primitivas" },
-    { id: "6", name: "Derivadas do Produto" },
-    { id: "7", name: "Derivadas da Soma" },
+    { id: "1", name: "Derivadas Primitivas", link: "" },
+    { id: "2", name: "Derivadas da Soma", link: "" },
+    { id: "3", name: "Derivadas do Produto", link: "" },
+    { id: "4", name: "Derivadas da Divisão", link: "" },
+    { id: "5", name: "Derivadas da Composição", link: "" },
+    { id: "6", name: "Derivadas Surpresa", link: "" },
 ];
