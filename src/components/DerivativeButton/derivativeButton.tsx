@@ -1,13 +1,22 @@
-import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import {
+    Text,
+    View,
+    TouchableOpacity,
+    TouchableOpacityProps,
+    StyleSheet,
+} from "react-native";
 import React from "react";
-import {} from "react-native";
-type derivativeButtonProps = {
+
+type derivativeButtonProps = TouchableOpacityProps & {
     name: string;
 };
 
-export default function DerivativeButton({ name }: derivativeButtonProps) {
+export default function DerivativeButton({
+    name,
+    ...rest
+}: derivativeButtonProps) {
     return (
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} {...rest} activeOpacity={0.7}>
             <Text style={styles.text}>{name}</Text>
         </TouchableOpacity>
     );

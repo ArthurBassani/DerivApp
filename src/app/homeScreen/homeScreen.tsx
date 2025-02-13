@@ -4,6 +4,7 @@ import Header from "@/src/components/Header/Header";
 import Footer from "@/src/components/Footer/Footer";
 import DerivativeButton from "@/src/components/DerivativeButton/derivativeButton";
 import { derivatives } from "@/src/components/DerivativeButton/derivativeTypes";
+import { router } from "expo-router";
 
 export default function HomeScreen() {
     return (
@@ -13,7 +14,9 @@ export default function HomeScreen() {
                 data={derivatives}
                 numColumns={2}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <DerivativeButton name={item.name} />}
+                renderItem={({ item }) => (
+                    <DerivativeButton name={item.name} onPress={() => {}} />
+                )}
                 contentContainerStyle={styles.listContainer}
             />
             <Footer />
