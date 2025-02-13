@@ -1,11 +1,13 @@
 import { View, Text, FlatList, StyleSheet, Animated } from "react-native";
+import { router } from "expo-router";
+import { useNavigation } from "expo-router";
+import { slides } from "@/src/app/onBording/slides";
 import React, { useState, useRef } from "react";
 import { OnBordingItem } from "./onBordingItem";
 import { NextButton } from "./nextButton";
 import { Paginator } from "./paginator";
-import slides from "@/slides";
-import { CurrentRenderContext } from "@react-navigation/native";
 
+//Arthur
 export function OnBording() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -14,13 +16,15 @@ export function OnBording() {
     setCurrentIndex(viewableItems[0].index);
   }).current;
 
+  const navigation = useNavigation();
+
   const slidesRef = useRef<FlatList>(null);
   const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
   const scrollTo = () => {
     if (currentIndex < slides.length - 1) {
       slidesRef.current?.scrollToIndex({ index: currentIndex + 1 });
     } else {
-      console.log("Ultimo item");
+      router.navigate("/signIn/signIn");
     }
   };
 

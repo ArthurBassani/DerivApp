@@ -8,6 +8,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 
+//Arthur
 export function Paginator({ data, scrollX }: any) {
   const { width } = useWindowDimensions();
   return (
