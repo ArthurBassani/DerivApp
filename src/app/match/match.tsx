@@ -4,7 +4,7 @@ import MatchHeader from "@/src/components/MatchComponents/Header";
 import MatchFooter from "@/src/components/MatchComponents/Footer";
 import AnswerButton from "@/src/components/MatchComponents/AnswerButton";
 import QuestionCard from "@/src/components/MatchComponents/QuestionCard";
-
+// acredito que para subir a FlatList de respostas eu deva colocar uma View no AnswerButton.tsx 
 const answers = [
     { id: "1", name: "Resposta A" },
     { id: "2", name: "Resposta B" },

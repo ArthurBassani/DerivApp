@@ -19,3 +19,9 @@ export default function NextButton({
         </TouchableOpacity>
     );
 }
+
+const styles = StyleSheet.create({
+    container:{
+
+    },
+})
