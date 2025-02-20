@@ -12,7 +12,7 @@ export default function Unidade(){
                 data={levels}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
-                                <LevelButton label={item.label} onPress={() => router.navigate("../ranking/ranking")} />
+                                <LevelButton label={item.label} onPress={() => router.navigate("../match/match")} />
                             )}
                 numColumns={1}
                 contentContainerStyle={styles.listContent}
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 5,
         width: '100%',
+        backgroundColor: "#E7DDED",
     },
     listContent: {
         paddingHorizontal: 16,

@@ -19,6 +19,7 @@ export default function TelaUnidade() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: "#E7DDED",
     },title: {// seria para configurar o título da derivada 
         fontSize: 18,
         color: "black",

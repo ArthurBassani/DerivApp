@@ -15,7 +15,7 @@ export default function HomeScreen() {
                 numColumns={2}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
-                    <DerivativeButton name={item.name} onPress={() => router.navigate("/Unidade/unidade")} />
+                    <DerivativeButton name={item.name} onPress={() => router.navigate("/unidade/unidade")} />
                 )}
                 contentContainerStyle={styles.listContainer}
             />
