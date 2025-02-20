@@ -11,16 +11,16 @@ const data = [
 ]
     
 export default function Unidade(){
+    
      const renderItem = ({item}: {item:{id: string; label: string}}) => (
         <TouchableOpacity style={styles.card}>
-           <Text style={styles.cardText}>
-            {item.label}
-           </Text>
+           <Text style={styles.cardText}>{item.label}</Text>
         </TouchableOpacity>
      );
 
      return(
         <View style={styles.container}>
+            
             <FlatList
                 data={data}
                 keyExtractor={(item) => item.id}
