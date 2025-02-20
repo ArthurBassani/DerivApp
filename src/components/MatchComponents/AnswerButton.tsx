@@ -25,7 +25,7 @@ const styles = StyleSheet.create(
             flexDirection: "row", // Para alinhar o texto e o ícone na horizontal
             alignItems: "center", // Centraliza os itens verticalmente
             justifyContent: "space-between", // Separa o texto e o ícone
-            backgroundColor: "#FFF", // Fundo branco do card
+            backgroundColor: "#4CAF50", // Fundo branco do card
             paddingVertical: 12, // Espaçamento interno
             paddingHorizontal: 16, // Espaçamento interno lateral
             borderRadius: 10, // Bordas arredondadas
@@ -59,7 +59,7 @@ const styles = StyleSheet.create(
         selectedText:{
             fontSize: 16,
             fontWeight: "bold",
-            color: "#000",
+            color: "#FFF",
         },
     }
 )

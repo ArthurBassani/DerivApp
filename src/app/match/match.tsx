@@ -3,13 +3,16 @@ import React, {useState} from "react";
 import MatchHeader from "@/src/components/MatchComponents/Header";
 import MatchFooter from "@/src/components/MatchComponents/Footer";
 import AnswerButton from "@/src/components/MatchComponents/AnswerButton";
+import QuestionCard from "@/src/components/MatchComponents/QuestionCard";
 
 const answers = [
     { id: "1", name: "Resposta A" },
     { id: "2", name: "Resposta B" },
     { id: "3", name: "Resposta C" },
     { id: "4", name: "Resposta D" },
-  ];
+  ];// exemplo
+
+  const question = "f(x) = 2x"; // exemplo
   
   export default function Match() {
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -18,7 +21,7 @@ const answers = [
       <View style={styles.container}>
         <MatchHeader />
   
-        <Text style={styles.text}>Função</Text>
+        <QuestionCard question={question}/>
   
         <FlatList
           data={answers}
@@ -55,5 +58,5 @@ const styles = StyleSheet.create({
     },
     list:{
         flex: 7,
-    }
+    }, 
 })
