@@ -1,6 +1,5 @@
 import { Text, View, StyleSheet,TouchableOpacity, TouchableOpacityProps } from "react-native";
 import React from "react";
-import { router} from "expo-router";
 
 type answerButtonProps = TouchableOpacityProps & {
     answer: string;
